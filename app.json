@@ -1,0 +1,7 @@
+{
+  "name": "TestModel",
+  "displayName": "TestModel",
+  "android": {
+    "package": "com.testmodel"
+  }
+}
