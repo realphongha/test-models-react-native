@@ -77,6 +77,7 @@ export default function ModelSpeedTestAbs(props) {
         let objInput = {};
         objInput[props.inputName] = testTensor;
         let res = await session.run(objInput);
+        // console.log(res);
         const t1 = performance.now();
         let time = t1 - t0;
         console.log(time);
@@ -130,6 +131,5 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     color: '#fff',
     fontSize: 20,
-  
   }
 });

@@ -1,8 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import NanoDet from '../NanoDet';
-import UdpPose from '../UdpPose';
+import NanoDetMO from '../NanoDetModelOnly';
+import UdpPoseMO from '../UdpPoseModelOnly';
+import FCNetMO from '../FCNetModelOnly';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -11,12 +12,11 @@ const Tab = createBottomTabNavigator();
 
 export default function SpeedTestScreen() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="NanoDet" component={NanoDet} />
-        <Tab.Screen name="UdpPose" component={UdpPose}/>
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Tab.Navigator>
+      <Tab.Screen name="NanoDetMO" component={NanoDetMO} />
+      <Tab.Screen name="UdpPoseMO" component={UdpPoseMO}/>
+      <Tab.Screen name="FCNetMO" component={FCNetMO}/>
+    </Tab.Navigator>
   );
 };
 
