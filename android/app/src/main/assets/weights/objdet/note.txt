@@ -1,1 +1,2 @@
 pico and yolov5 simplified
+quantized version should be u8s8 and on basic optimization level

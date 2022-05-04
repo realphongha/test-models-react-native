@@ -41,6 +41,8 @@ export default function CamEngine({navigation}) {
   const onSnap = async () => {
     let options = {
       flash: 'auto',
+      qualityPrioritization: 'speed',
+      skipMetadata: false,
     }
     let img = await cameraRef.current.takePhoto(options);
     // setPhoto(img.path);
@@ -79,6 +81,7 @@ export default function CamEngine({navigation}) {
           device={devices[camPosition]}
           isActive={true}
           photo={true}
+          preset="low"
         />
       )}
       {perm && devices[camPosition] && (
